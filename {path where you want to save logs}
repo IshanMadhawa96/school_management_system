@@ -1,0 +1,6 @@
+[19832] Log opened at 2023-10-25 04:50:28.934720
+[19832] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[19832] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[19832] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[19832] [Step Debug] WARN: Could not discover client host through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[19832] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
