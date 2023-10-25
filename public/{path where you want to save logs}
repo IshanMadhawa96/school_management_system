@@ -1,0 +1,24 @@
+[27748] Log opened at 2023-10-25 04:56:30.977037
+[27748] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[27748] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[27748] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[27748] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[27748] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[27748] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[27748] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[27748] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[27748] Log closed at 2023-10-25 04:56:35.649140
+
+[27748] Log opened at 2023-10-25 04:56:40.660626
+[27748] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[27748] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[27748] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[27748] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[27748] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[27748] Log closed at 2023-10-25 04:56:41.080048
+
