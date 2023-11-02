@@ -17794,3 +17794,93 @@
 [4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
 [4968] Log closed at 2023-11-01 18:23:55.877550
 
+[4968] Log opened at 2023-11-02 05:01:33.831623
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:34.496311
+
+[4968] Log opened at 2023-11-02 05:01:34.511464
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:34.947735
+
+[4968] Log opened at 2023-11-02 05:01:34.961053
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:35.395305
+
+[4968] Log opened at 2023-11-02 05:01:35.418585
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:35.844792
+
+[4968] Log opened at 2023-11-02 05:01:35.862538
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:36.282396
+
+[4968] Log opened at 2023-11-02 05:01:36.288193
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:36.720163
+
+[4968] Log opened at 2023-11-02 05:01:36.734980
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:37.211108
+
+[4968] Log opened at 2023-11-02 05:01:37.226342
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:42.388851
+
+[4968] Log opened at 2023-11-02 05:01:42.411699
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:43.572003
+
+[4968] Log opened at 2023-11-02 05:01:43.579419
+[4968] [Step Debug] INFO: Checking for client discovery headers: 'HTTP_X_FORWARDED_FOR,REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Checking header 'HTTP_X_FORWARDED_FOR'.
+[4968] [Step Debug] INFO: Checking header 'REMOTE_ADDR'.
+[4968] [Step Debug] INFO: Client host discovered through HTTP header, connecting to 127.0.0.1:9003.
+[4968] [Step Debug] WARN: Could not connect to client host discovered through HTTP headers, connecting to configured address/port: 127.0.0.1:9003.
+[4968] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: 127.0.0.1:9003 (from REMOTE_ADDR HTTP header), 127.0.0.1:9003 (fallback through xdebug.client_host/xdebug.client_port).
+[4968] Log closed at 2023-11-02 05:01:43.987601
+

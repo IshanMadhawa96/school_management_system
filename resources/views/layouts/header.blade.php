@@ -141,7 +141,7 @@
           <li class="nav-item menu-open">
            @if(Auth::user()->user_type==1)
             <li class="nav-item">
-                <a href="{{ url('admin/dashboard') }}" class="nav-link">
+                <a href="{{ url('admin/dashboard') }}" class="nav-link @if(Request::segment(2)=='dashboard') active @endif">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
@@ -149,7 +149,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('admin/admin/list') }}" class="nav-link">
+                <a href="{{ url('admin/admin/list') }}" class="nav-link" @if(Request::segment(2)=='admin') active @endif">
                 <i class="nav-icon far fa-user"></i>
                 <p>
                 Admin
@@ -158,7 +158,7 @@
             </li>
            @elseif(Auth::user()->user_type==2)
             <li class="nav-item">
-                <a href="{{ url('teacher/dashboard') }}" class="nav-link">
+                <a href="{{ url('teacher/dashboard') }}" class="nav-link" @if(Request::segment(2)=='dashboard') active @endif">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
@@ -167,7 +167,7 @@
             </li>
            @elseif(Auth::user()->user_type==3)
             <li class="nav-item">
-                <a href="{{ url('student/dashboard') }}" class="nav-link">
+                <a href="{{ url('student/dashboard') }}" class="nav-link" @if(Request::segment(2)=='dashboard') active @endif">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
@@ -176,7 +176,7 @@
             </li>
            @elseif(Auth::user()->user_type==4)
             <li class="nav-item">
-                <a href="{{ url('parent/dashboard') }}" class="nav-link">
+                <a href="{{ url('parent/dashboard') }}" class="nav-link" @if(Request::segment(2)=='dashboard') active @endif">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
