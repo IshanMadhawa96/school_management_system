@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use Auth;
+use App\Models\User;
 class AuthController extends Controller
 {
     public function login(){
@@ -37,21 +38,6 @@ class AuthController extends Controller
             {
                 return redirect('parent/dashboard');
             }
-            // if(Auth::user()->user_type == 1){
-            //     return view('admin.dashboard');
-            // }
-            // elseif(Auth::user()->user_type == 2){
-            //     return view('teacher.dashboard');
-            // }
-            // elseif(Auth::user()->user_type == 3)
-            // {
-            //     return view('student.dashboard');
-            // }
-            // elseif(Auth::user()->user_type == 4)
-            // {
-            //     return view('parent.dashboard');
-            // }
-
         }
         else{
             return redirect()->back()->with('error','Please enter correct email and password');
@@ -61,5 +47,19 @@ class AuthController extends Controller
     public function logout(){
         Auth::logout();
         return view('auth.login');
+    }
+
+    public function forgotPassword(){
+        return view('auth.forgot');
+    }
+
+    public function postForgotPassword(Request $request){
+        $user = User::getEmailSingle($request->email);
+        if(!empty($user)){
+
+        }
+        else{
+            return redirect()->back()->with('error','Email not found in the system.');
+        }
     }
 }
