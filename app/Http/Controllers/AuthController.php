@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Hash;
 use Auth;
 use App\Models\User;
+use App\Mail\ForgetPasswordMail;
+use Mail;
+use Str;
+
 class AuthController extends Controller
 {
     public function login(){
@@ -57,9 +61,37 @@ class AuthController extends Controller
         $user = User::getEmailSingle($request->email);
         if(!empty($user)){
 
+            $user->remember_token = Str::random(30);
+            $user->save();
+            Mail::to($user->email)->send(new ForgetPasswordMail($user));
+            return redirect()->back()->with('success','Please check your email and reset your password');
         }
         else{
             return redirect()->back()->with('error','Email not found in the system.');
+        }
+    }
+
+    public function reset($token){
+        $user = User::getTokenSingle($token);
+       if(!empty($user)){
+        $data['user'] = $user;
+        return view('auth.reset',$data);
+       }
+       else{
+        abort(404);
+       }
+    }
+
+    public function postReset($token,Request $request){
+        if($request->password == $request->cpassword){
+            $user = User::getTokenSingle($token);
+            $user->password = Hash::make($request->password);
+            $user->remember_token = Str::random(30);
+            $user->save();
+            return redirect(url(''))->with('success','Password successfully  reset');
+        }
+        else{
+            return redirect()->back()->with('error','Password and Confirm Password Does Not match');
         }
     }
 }
