@@ -3,16 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\AdminController;
+
 
 
 Route::get('/',[AuthController::class,'login']);
@@ -23,12 +15,14 @@ Route::post('forgot-password',[AuthController::class,'postForgotPassword']);
 Route::get('reset/{token}',[AuthController::class,'reset']);
 Route::post('reset/{token}',[AuthController::class,'postReset']);
 
-Route::get('admin/admin', function () {
-    return view('admin.admin.list');
-});
+
 
 Route::group(['middleware'=>'admin'],function(){
     Route::get('admin/dashboard',[DashboardController::class,'dashboard']);
+    Route::get('admin/admin/list',[AdminController::class,'list']);
+    Route::get('admin/admin/add',[AdminController::class,'add']);
+    Route::post('admin/admin/add',[AdminController::class,'insert']);
+
 });
 
 Route::group(['middleware'=>'teacher'],function(){

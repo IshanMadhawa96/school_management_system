@@ -51,5 +51,8 @@ class User extends Authenticatable
         return User::where('remember_token', '=' , $token)->first();
     }
 
+    static public function getAdmin(){
+        return User::select('users.*')->where('user_type','=',1)->orderBy('id','desc')->get();
+    }
 
 }
