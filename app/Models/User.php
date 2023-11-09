@@ -52,7 +52,11 @@ class User extends Authenticatable
     }
 
     static public function getAdmin(){
-        return User::select('users.*')->where('user_type','=',1)->orderBy('id','desc')->get();
+        return User::select('users.*')->where('user_type','=',1)->where('is_delete','=',0)->orderBy('id','desc')->get();
+    }
+
+    static public function getSingle($id){
+        return User::find($id);
     }
 
 }
