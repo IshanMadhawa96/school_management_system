@@ -25,16 +25,16 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <form method="post" action="{{ url('admin/admin/add') }}">
+              <form method="post" action="{{ url('admin/admin/edit/'.$getRecord->id) }}">
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
                     <label >Name</label>
-                    <input type="name" class="form-control" name="name" value="{{ old('name',$getRecord->name )}}" required placeholder="Name">
+                    <input type="name" class="form-control" name="name" value="{{ old('name',$getRecord->name )}}"  placeholder="Name">
                   </div>
                   <div class="form-group">
                     <label >Email</label>
-                    <input type="email" class="form-control" name="email" required value="{{ old('email',$getRecord->email )}}"  placeholder="Email">
+                    <input type="email" class="form-control" name="email"  value="{{ old('email',$getRecord->email )}}"  placeholder="Email">
                     <div style="color:red">{{ $errors->first('email') }}</div>
                   </div>
                   <div class="form-group">

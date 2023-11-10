@@ -9,19 +9,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Admin List </h1>
+            <h1>Admin List  (Total:{{ $getRecord->total() }}) </h1>
           </div>
 
           <div class="col-sm-6" style="text-align: right;">
             <a href="{{ url('admin/admin/add') }}" class="btn btn-primary">Add new Admin</a>
           </div>
 
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Simple Tables</li>
-            </ol>
-          </div>
+
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -31,22 +26,32 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Search Admin</h3>
+                  </div>
+                <form method="get" action="{{ url('admin/admin/add') }}">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label >Name</label>
+                                <input type="name" class="form-control" name="name" value="{{ Request::get('name') }}"  placeholder="Name">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label >Email</label>
+                                <input type="text" class="form-control" name="email" value="{{ Request::get('email') }}"   placeholder="Email">
+                                <div style="color:red">{{ $errors->first('email') }}</div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <button type="submit" class="btn btn-primary" style="margin-top: 30px">Search</button>
+                                <a href="{{ url('admin/admin/list') }}" class="btn btn-success" style="margin-top: 30px">Clear</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
             @include('_message')
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Admin List</h3>
-
-                <div class="card-tools">
-                  <ul class="pagination pagination-sm float-right">
-                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- /.card-header -->
               <div class="card-body p-0">
                 <table class="table">
                   <thead>
@@ -74,6 +79,9 @@
                    @endforeach
                   </tbody>
                 </table>
+                <div style="padding:10px; float:right">
+                    {!! $getRecord->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!}
+                </div>
               </div>
               <!-- /.card-body -->
             </div>

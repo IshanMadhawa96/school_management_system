@@ -46,18 +46,11 @@ class AdminController extends Controller
 
     public function update(Request $request,$id){
         request()->validate([
-            'email'=>'required|email|unique:users,email'.$id
+            'email'=>'required|email|unique:users,email,'.$id
         ]);
        $user = User::getSingle($id);;
        $user->name = trim($request->name);
-       if ($request->email != $user->email) {
-        // Check if the new email already exists in the database
-        $existingUser = User::where('email', $request->email)->first();
-        if ($existingUser) {
-            return redirect()->back()->with('error', 'Email address already exists');
-        }
-        }
-       //$user->email = trim($request->email);
+       $user->email = trim($request->email);
        if(!empty($request->password)){
         $user->password = Hash::make($request->password);
        }
