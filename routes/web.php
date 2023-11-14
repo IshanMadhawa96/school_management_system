@@ -18,6 +18,7 @@ Route::post('reset/{token}',[AuthController::class,'postReset']);
 
 
 Route::group(['middleware'=>'admin'],function(){
+
     Route::get('admin/dashboard',[DashboardController::class,'dashboard']);
     Route::get('admin/admin/list',[AdminController::class,'list']);
     Route::get('admin/admin/add',[AdminController::class,'add']);
@@ -28,6 +29,8 @@ Route::group(['middleware'=>'admin'],function(){
 
     //class route
     Route::get('admin/class/list',[ClassController::class,'list']);
+    Route::get('admin/class/add',[ClassController::class,'add']);
+    Route::post('admin/class/add',[ClassController::class,'insert']);
 });
 
 Route::group(['middleware'=>'teacher'],function(){
