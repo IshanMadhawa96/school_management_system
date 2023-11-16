@@ -28,4 +28,16 @@ class ClassController extends Controller
         $save->save();
         return redirect('admin/class/list')->with('success',"Class successfully created!");
     }
+
+    public function edit($id){
+        $data['getRecord'] = Clz::getSingle($id);
+        if(!empty($data['getRecord'])){
+            $data['header_title'] = "Edit Class Information";
+            return view('admin.class.edit',$data);
+        }
+        else{
+            abort(404);
+        }
+
+    }
 }

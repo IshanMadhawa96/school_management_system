@@ -16,4 +16,8 @@ class Clz extends Model
                        ->paginate(10);
         return $return;
     }
+
+    static public function getSingle($id){
+        return Clz::find($id);
+    }
 }

@@ -22,9 +22,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('clzs', function (Blueprint $table) {
-            Schema::table('clzs', function (Blueprint $table) {
+
                 $table->dropColumn('is_delete');
-            });
+         
         });
     }
 };
