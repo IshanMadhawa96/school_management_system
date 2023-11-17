@@ -40,4 +40,19 @@ class ClassController extends Controller
         }
 
     }
+
+    public function update($id,Request $request){
+        $save = Clz::getSingle($id);
+        $save->name = $request->name;
+        $save->status = $request->status;
+        $save->save();
+        return redirect('admin/class/list')->with('success',"Class successfully updated!");
+    }
+
+    public function delete($id){
+        $save = Clz::getSingle($id);
+        $save->is_delete =1;
+        $save->save();
+        return redirect()->back()->with('success',"Class successfully deleted!");
+    }
 }

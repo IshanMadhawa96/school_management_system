@@ -30,7 +30,7 @@
                 <div class="card-header">
                     <h3 class="card-title">Search Class</h3>
                   </div>
-                <form method="get" action="{{ url('admin/admin/list') }}">
+                <form method="get" action="{{ url('admin/class/list') }}">
                     <div class="card-body">
                         <div class="row">
                             <div class="form-group col-md-3">

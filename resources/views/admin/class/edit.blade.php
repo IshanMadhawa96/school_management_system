@@ -25,7 +25,7 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <form method="post" action="{{ url('admin/class/add') }}">
+              <form method="post" action="{{ url('admin/class/edit/'.$getRecord->id) }}">
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
