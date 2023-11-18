@@ -66,26 +66,32 @@
                     </tr>
                   </thead>
                   <tbody>
-                   @foreach ($getRecord as $value )
-                    <tr>
-                        <td>{{ $value->id }}</td>
-                        <td>{{ $value->name }}</td>
-                        <td>
-                            @if( $value->status == 0)
-                                Active
-                            @else
-                                InActive
-                            @endif
-                        </td>
-                        <td>{{ $value->created_by_name }}</td>
-                        <td>{{ date('d-m-Y H:i A'),strtotime($value->created_at) }}</td>
-                        <td>
-                            <a href="{{ url('admin/class/edit/'.$value->id) }}" class="btn btn-primary">Edit</a>
-                            <a href="{{ url('admin/class/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
-                        </td>
-                        </td>
-                    </tr>
-                   @endforeach
+                    @if(count($getRecord) > 0)
+                        @foreach ($getRecord as $value )
+                            <tr>
+                                <td>{{ $value->id }}</td>
+                                <td>{{ $value->name }}</td>
+                                <td>
+                                    @if( $value->status == 0)
+                                        Active
+                                    @else
+                                        InActive
+                                    @endif
+                                </td>
+                                <td>{{ $value->created_by_name }}</td>
+                                <td>{{ date('d-m-Y H:i A'),strtotime($value->created_at) }}</td>
+                                <td>
+                                    <a href="{{ url('admin/class/edit/'.$value->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ url('admin/class/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
+                                </td>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="7" class="text-center">No records found</td>
+                        </tr>
+                    @endif
                   </tbody>
                 </table>
                 <div style="padding:10px; float:right">
