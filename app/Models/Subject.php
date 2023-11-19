@@ -16,6 +16,9 @@ class Subject extends Model
                      if(!empty(Request::get('name'))){
                         $return = $return->where('subjects.name','like','%' . Request::get('name').'%');
                      }
+                     if(!empty(Request::get('type'))){
+                        $return = $return->whereDate('subjects.type','=',Request::get('type'));
+                     }
                      if(!empty(Request::get('date'))){
                         $return = $return->whereDate('subjects.created_at','=',Request::get('date'));
                      }
@@ -23,5 +26,9 @@ class Subject extends Model
                        ->orderBy('subjects.id','desc')
                        ->paginate(10);
         return $return;
+    }
+
+    static public function getSingle($id){
+        return Subject::find($id);
     }
 }

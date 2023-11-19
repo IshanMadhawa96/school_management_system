@@ -39,13 +39,23 @@
                             </div>
 
                             <div class="form-group col-md-3">
+                                <label >Subject Type</label>
+                                <select class="form-control" name="type" required>
+                                    <option value="0">Select Type</option>
+                                    <option {{ Request::get('type') == 'Theory' ? 'selected' : '' }} value="Theory">Theory</option>
+                                    <option {{ Request::get('type') == 'Practical' ? 'selected' : '' }} value="Practical">Practical</option>
+                                    <option {{ Request::get('type') == 'Revision' ? 'selected' : ''}} value="Revision">Revision</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-3">
                                 <label >Date</label>
                                 <input type="date" class="form-control" name="date" value="{{ Request::get('date') }}"   placeholder="Date">
                                 <div style="color:red">{{ $errors->first('date') }}</div>
                             </div>
                             <div class="form-group col-md-3">
                                 <button type="submit" class="btn btn-primary" style="margin-top: 30px">Search</button>
-                                <a href="{{ url('admin/subject/list') }}" class="btn btn-success" style="margin-top: 30px">Clear</a>
+                                <a href="{{ url('admin/subject/list') }}" class="btn btn-success" style="margin-top: 30px">Reset</a>
                             </div>
                         </div>
                     </div>

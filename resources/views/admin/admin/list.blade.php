@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group col-md-3">
                                 <button type="submit" class="btn btn-primary" style="margin-top: 30px">Search</button>
-                                <a href="{{ url('admin/admin/list') }}" class="btn btn-success" style="margin-top: 30px">Clear</a>
+                                <a href="{{ url('admin/admin/list') }}" class="btn btn-success" style="margin-top: 30px">Reset</a>
                             </div>
                         </div>
                     </div>
