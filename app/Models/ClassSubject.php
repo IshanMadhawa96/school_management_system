@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ClassSubject extends Model
 {
     use HasFactory;
+
+    static public function getRecord(){
+        return ClassSubject::get();
+    }
 }
