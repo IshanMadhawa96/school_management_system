@@ -43,6 +43,14 @@ Route::group(['middleware'=>'admin'],function(){
     Route::post('admin/subject/edit/{id}',[SubjectController::class,'update']);
     Route::get('admin/subject/delete/{id}',[SubjectController::class,'delete']);
 
+    //assign subject routes
+    Route::get('admin/assign_subject/list',[SubjectController::class,'list']);
+    Route::get('admin/assign_subject/add',[SubjectController::class,'add']);
+    Route::post('admin/assign_subject/add',[SubjectController::class,'insert']);
+    Route::get('admin/assign_subject/edit/{id}',[SubjectController::class,'edit']);
+    Route::post('admin/assign_subject/edit/{id}',[SubjectController::class,'update']);
+    Route::get('admin/assign_subject/delete/{id}',[SubjectController::class,'delete']);
+
 });
 
 Route::group(['middleware'=>'teacher'],function(){
