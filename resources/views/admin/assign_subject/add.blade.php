@@ -29,8 +29,22 @@
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
-                    <label >Class Name</label>
-                    <input type="name" class="form-control" name="name"  required placeholder="Class Name">
+                    <label >Select Class</label>
+                    <select class="form-control" name="class_id" required>
+                        <option>Select Class</option>
+                       @foreach ( $getClass as $class )
+                        <option value="{{  $class->id }}">{{ $class->name }}</option>
+                       @endforeach
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label >Subject Name</label>
+                    <select class="form-control" name="class_id" required>
+                        <option>Select Subject</option>
+                       @foreach ( $getSubject as $subject )
+                        <option value="{{  $subject->id }}">{{ $subject->name }}</option>
+                       @endforeach
+                    </select>
                   </div>
                   <div class="form-group">
                     <label >Status</label>

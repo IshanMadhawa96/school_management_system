@@ -28,4 +28,14 @@ class Clz extends Model
     static public function getSingle($id){
         return Clz::find($id);
     }
+
+    static public function getClass(){
+        $return = Clz::select('clzs.*')
+                        ->join('users','users.id','clzs.created_by')
+                        ->where('clzs.is_delete','=',0)
+                        ->where('clzs.status','=',0)
+                        ->orderBy('clzs.name','asc')
+                        ->get();
+        return $return;
+    }
 }

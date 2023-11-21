@@ -18,6 +18,8 @@ class ClassSubjectController extends Controller
     }
 
     public function add(){
+        $data['getClass'] = Clz::getClass();
+        $data['getSubject'] = Subject::getSubject();
         $data['header_title'] = "Assign Subject Add";
         return view('admin.assign_subject.add',$data);
     }

@@ -31,4 +31,14 @@ class Subject extends Model
     static public function getSingle($id){
         return Subject::find($id);
     }
+
+    static public function getSubject(){
+        $return = Subject::select('subjects.*','users.name as created_by_name')
+                    ->join('users','users.id','subjects.created_by')
+                    ->where('subjects.is_delete','=',0)
+                    ->where('subjects.status','=',0)
+                    ->orderBy('subjects.name','asc')
+                    ->get();
+        return $return;
+    }
 }
