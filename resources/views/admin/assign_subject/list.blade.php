@@ -27,14 +27,17 @@
                 <div class="card-header">
                     <h3 class="card-title"> Assgin Subject List </h3>
                   </div>
-                <form method="get" action="{{ url('admin/class/list') }}">
+                <form method="get" action="{{ url('admin/assign_subject/list') }}">
                     <div class="card-body">
                         <div class="row">
                             <div class="form-group col-md-3">
-                                <label >Name</label>
-                                <input type="text" class="form-control" name="name" value="{{ Request::get('name') }}"  placeholder="Name">
+                                <label>Class Name</label>
+                                <input type="text" class="form-control" name="class_name" value="{{ Request::get('class_name') }}"  placeholder="Class Name">
                             </div>
-
+                            <div class="form-group col-md-3">
+                                <label>Subject Name</label>
+                                <input type="text" class="form-control" name="subject_name" value="{{ Request::get('subject_name') }}"  placeholder="Subject Name">
+                            </div>
                             <div class="form-group col-md-3">
                                 <label >Date</label>
                                 <input type="date" class="form-control" name="date" value="{{ Request::get('date') }}"   placeholder="Date">
@@ -42,7 +45,7 @@
                             </div>
                             <div class="form-group col-md-3">
                                 <button type="submit" class="btn btn-primary" style="margin-top: 30px">Search</button>
-                                <a href="{{ url('admin/class/list') }}" class="btn btn-success" style="margin-top: 30px">Reset</a>
+                                <a href="{{ url('admin/assign_subject/list') }}" class="btn btn-success" style="margin-top: 30px">Reset</a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +58,8 @@
                   <thead>
                     <tr>
                       <th >#</th>
-                      <th>Name</th>
+                      <th>Class Name</th>
+                      <th>Subject Name</th>
                       <th>Status</th>
                       <th>Created By</th>
                       <th>Created Date</th>
@@ -68,6 +72,7 @@
                             <tr>
                                 <td>{{ $value->id }}</td>
                                 <td>{{ $value->name }}</td>
+                                <td>{{ $value->subject_name }}</td>
                                 <td>
                                     @if( $value->status == 0)
                                         Active
@@ -78,8 +83,8 @@
                                 <td>{{ $value->created_by_name }}</td>
                                 <td>{{ date('d-m-Y H:i A'),strtotime($value->created_at) }}</td>
                                 <td>
-                                    <a href="{{ url('admin/class/edit/'.$value->id) }}" class="btn btn-primary">Edit</a>
-                                    <a href="{{ url('admin/class/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
+                                    <a href="{{ url('admin/assign_subject/edit/'.$value->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ url('admin/assign_subject/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
                                 </td>
                                 </td>
                             </tr>
@@ -92,7 +97,7 @@
                   </tbody>
                 </table>
                 <div style="padding:10px; float:right">
-                    {{-- {!! $getRecord->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} --}}
+                    {!! $getRecord->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!}
                 </div>
               </div>
               <!-- /.card-body -->
