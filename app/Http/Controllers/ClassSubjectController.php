@@ -61,6 +61,8 @@ class ClassSubjectController extends Controller
 
         $getRecord = ClassSubject::getSingle($id);
         if(!empty($getRecord)){
+
+            $data['getRecord'] = $getRecord;
             $data['getAssignSubjectID'] = ClassSubject::getAssignSubjectID($getRecord->class_id);
             $data['getClass'] = Clz::getClass();
             $data['getSubject'] = Subject::getSubject();
