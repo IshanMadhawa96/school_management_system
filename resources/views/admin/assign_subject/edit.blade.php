@@ -25,7 +25,7 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <form method="post" action="{{ url('admin/assign_subject/add') }}">
+              <form method="post" action="{{ url('admin/assign_subject/edit') }}">
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
@@ -66,7 +66,7 @@
                     </select>
                   </div>
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Update</button>
                 </div>
               </form>
             </div>

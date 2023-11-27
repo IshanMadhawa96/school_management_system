@@ -75,4 +75,30 @@ class ClassSubjectController extends Controller
 
     }
 
+    public function update($id,Request $request){
+        ClassSubject::deleteSubject($request->id);
+
+        if(!empty($request->subject_id)){
+            foreach($request->subject_id as $subject_id){
+
+                $getAlreadyFirst = ClassSubject::getAlreadyFirst($request->class_id,$subject_id);
+                if(!empty($getAlreadyFirst)){
+                    $getAlreadyFirst->status = $request->status;
+                    $getAlreadyFirst->save();
+                }
+                else{
+
+                    $save = new ClassSubject;
+                    $save->class_id = $request->class_id;
+                    $save->subject_id = $subject_id;
+                    $save->status = $request->status;
+                    $save->created_by = Auth::user()->id;
+                    $save->save();
+                }
+            }
+
+        }
+        return redirect('admin/assign_subject/list')->with('success',"Subject Successfully Assign");
+    }
+
 }
