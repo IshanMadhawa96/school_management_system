@@ -57,7 +57,7 @@ class ClassSubjectController extends Controller
         return redirect()->back()->with('success',"Class successfully deleted!");
     }
 
-    public function edit($id,Request $request){
+    public function edit($id){
 
         $getRecord = ClassSubject::getSingle($id);
         if(!empty($getRecord)){
@@ -75,7 +75,8 @@ class ClassSubjectController extends Controller
 
     }
 
-    public function update($id,Request $request){
+    public function update(Request $request){
+
         ClassSubject::deleteSubject($request->id);
 
         if(!empty($request->subject_id)){
@@ -99,6 +100,41 @@ class ClassSubjectController extends Controller
 
         }
         return redirect('admin/assign_subject/list')->with('success',"Subject Successfully Assign");
+    }
+
+    public function editSingle($id){
+        $getRecord = ClassSubject::getSingle($id);
+        if(!empty($getRecord)){
+
+            $data['getRecord'] = $getRecord;
+            $data['getClass'] = Clz::getClass();
+            $data['getSubject'] = Subject::getSubject();
+            $data['header_title'] = "Edit Subject Assign List";
+            return view('admin.assign_subject.edit_single',$data);
+        }
+        else{
+            abort(404);
+        }
+    }
+
+    public function updateSingle(Request $request){
+
+        $getAlreadyFirst = ClassSubject::getAlreadyFirst($request->class_id,$request->subject_id);
+        if(!empty($getAlreadyFirst)){
+            $getAlreadyFirst->status = $request->status;
+            $getAlreadyFirst->save();
+            return redirect('admin/assign_subject/list')->with('success',"Status Successfully Updated");
+        }
+        else{
+
+            $save =  ClassSubject::getSingle($request->id);
+            $save->class_id = $request->class_id;
+            $save->subject_id = $request->subject_id;
+            $save->status = $request->status;
+            $save->save();
+            return redirect('admin/assign_subject/list')->with('success',"Subject Successfully Assign");
+        }
+
     }
 
 }
