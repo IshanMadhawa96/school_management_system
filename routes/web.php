@@ -8,6 +8,7 @@ use App\Http\Controllers\ClassController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ClassSubjectController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 
 Route::get('/',[AuthController::class,'login']);
 Route::get('logout',[AuthController::class,'logout']);
@@ -58,6 +59,11 @@ Route::group(['middleware'=>'admin'],function(){
     //change password
     Route::get('admin/change_password',[UserController::class,'changePassword']);
     Route::post('admin/change_password',[UserController::class,'updateChangePassword']);
+
+    // student
+    Route::get('admin/student/list',[StudentController::class,'list']);
+    Route::get('admin/student/add',[StudentController::class,'add']);
+    Route::post('admin/student/add',[StudentController::class,'insert']);
 
 
 });

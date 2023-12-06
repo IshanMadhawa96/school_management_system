@@ -30,7 +30,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label >Name</label>
-                    <input type="name" class="form-control" name="name" value="{{ old('name') }}" required placeholder="Name">
+                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" required placeholder="Name">
                   </div>
                   <div class="form-group">
                     <label >Email</label>
