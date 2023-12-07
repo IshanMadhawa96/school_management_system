@@ -25,7 +25,7 @@
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <form method="post" action="{{ url('admin/student/add') }}">
+              <form method="post" action="{{ url('admin/student/add') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
                   <div class="row">
@@ -54,6 +54,9 @@
                         <label >Class<span style="color:red">*</span></label>
                             <select class="form-control" name="class_id">
                                 <option value="">Select Class</option>
+                                @foreach ($getClass as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                @endforeach
                             </select>
                     </div>
 

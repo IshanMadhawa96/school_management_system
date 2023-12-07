@@ -13,7 +13,7 @@
           </div>
 
           <div class="col-sm-6" style="text-align: right;">
-            <a href="{{ url('admin/admin/add') }}" class="btn btn-primary">Add new Student</a>
+            <a href="{{ url('admin/student/add') }}" class="btn btn-primary">Add new Student</a>
           </div>
 
 
